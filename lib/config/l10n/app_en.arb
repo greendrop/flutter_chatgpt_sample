@@ -1,0 +1,19 @@
+{
+  "@@locale": "en",
+  "appTitle": "ChatGPT Sample",
+  "ok": "OK",
+  "ng": "NG",
+  "yes": "Yes",
+  "no": "No",
+  "chatTitle": "Chat",
+  "settingTitle": "Setting",
+  "localeSettingTitle": "Language",
+  "localeSettingSystem": "System",
+  "localeSettingEnglish": "English",
+  "localeSettingJapanese": "日本語",
+  "themeSettingTitle": "Theme",
+  "themeSettingSystem": "System",
+  "themeSettingLight": "Light",
+  "themeSettingDark": "Dark",
+  "aboutAppTitle": "About App"
+}
