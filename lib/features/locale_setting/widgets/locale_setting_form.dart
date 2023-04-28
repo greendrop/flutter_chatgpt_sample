@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chatgpt_sample/features/locale_setting/providers/locale_state_notifier_provider.dart';
+import 'package:flutter_chatgpt_sample/features/locale_setting/providers/locale_notifier_provider.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -12,7 +12,7 @@ class LocaleSettingForm extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final formKey = useMemoized(GlobalKey<FormState>.new);
-    final locale = ref.watch(localeStateNotifierProvider);
+    final locale = ref.watch(localeNotifierProvider);
     final l10n = L10n.of(context)!;
 
     return Form(
@@ -56,6 +56,6 @@ class LocaleSettingForm extends HookConsumerWidget {
     required WidgetRef ref,
     required Locale? locale,
   }) {
-    ref.read(localeStateNotifierProvider.notifier).setLocale(locale);
+    ref.read(localeNotifierProvider.notifier).setLocale(locale);
   }
 }

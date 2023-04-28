@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chatgpt_sample/features/theme_setting/providers/theme_mode_state_notifier_provider.dart';
+import 'package:flutter_chatgpt_sample/features/theme_setting/providers/theme_mode_notifier_provider.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -13,7 +13,7 @@ class ThemeSettingForm extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final formKey = useMemoized(GlobalKey<FormState>.new);
-    final themeMode = ref.watch(themeModeStateNotifierProvider);
+    final themeMode = ref.watch(themeModeNotifierProvider);
     final l10n = L10n.of(context)!;
 
     return Form(
@@ -61,7 +61,7 @@ class ThemeSettingForm extends HookConsumerWidget {
     required ThemeMode? themeMode,
   }) {
     ref
-        .read(themeModeStateNotifierProvider.notifier)
+        .read(themeModeNotifierProvider.notifier)
         .setThemeMode(themeMode ?? ThemeMode.system);
   }
 }

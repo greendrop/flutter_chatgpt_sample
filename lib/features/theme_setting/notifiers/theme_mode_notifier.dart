@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt_sample/features/theme_setting/providers/theme_mode_repository_provider.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ThemeModeStateNotifier extends StateNotifier<ThemeMode> {
-  ThemeModeStateNotifier({required this.ref}) : super(ThemeMode.system);
+class ThemeModeNotifier extends StateNotifier<ThemeMode> {
+  ThemeModeNotifier({required this.ref}) : super(ThemeMode.system);
 
   final Ref ref;
 
