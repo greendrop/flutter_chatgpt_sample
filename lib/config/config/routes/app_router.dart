@@ -1,9 +1,9 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_chatgpt_sample/features/chat/widgets/chat_page.dart';
-import 'package:flutter_chatgpt_sample/features/locale_setting/widgets/locale_setting_page.dart';
-import 'package:flutter_chatgpt_sample/features/main/widgets/main_page.dart';
-import 'package:flutter_chatgpt_sample/features/setting/widgets/setting_page.dart';
-import 'package:flutter_chatgpt_sample/features/theme_setting/widgets/theme_setting_page.dart';
+import 'package:flutter_chatgpt_sample/feature/chat/widget/chat_page.dart';
+import 'package:flutter_chatgpt_sample/feature/locale_setting/widget/locale_setting_page.dart';
+import 'package:flutter_chatgpt_sample/feature/main/widget/main_page.dart';
+import 'package:flutter_chatgpt_sample/feature/setting/widget/setting_page.dart';
+import 'package:flutter_chatgpt_sample/feature/theme_setting/widget/theme_setting_page.dart';
 
 part 'app_router.gr.dart';
 

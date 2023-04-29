@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt_sample/config/config/routes/app_router.dart';
 import 'package:flutter_chatgpt_sample/config/themes/app_theme_data.dart';
-import 'package:flutter_chatgpt_sample/features/locale_setting/providers/locale_notifier_provider.dart';
-import 'package:flutter_chatgpt_sample/features/theme_setting/providers/theme_mode_notifier_provider.dart';
+import 'package:flutter_chatgpt_sample/feature/locale_setting/provider/locale_notifier_provider.dart';
+import 'package:flutter_chatgpt_sample/feature/theme_setting/provider/theme_mode_notifier_provider.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
