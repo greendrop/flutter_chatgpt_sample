@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Dev",
+      "request": "launch",
+      "type": "dart",
+      "program": "lib/main.dart",
+      "args": [
+        "--debug",
+        "--dart-define=OPEN_AI_API_KEY=OPEN_AI_API_KEY"
+      ]
+    }
+  ]
+}

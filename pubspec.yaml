@@ -10,8 +10,11 @@ environment:
 dependencies:
   auto_route: ^6.4.0
   cupertino_icons: ^1.0.2
+  dio: ^5.1.1
   flutter:
     sdk: flutter
+  flutter_chat_types: ^3.6.0
+  flutter_chat_ui: ^1.6.6
   flutter_hooks: ^0.18.6
   flutter_localizations:
     sdk: flutter
@@ -20,7 +23,9 @@ dependencies:
   hooks_riverpod: ^2.3.6
   intl: ^0.17.0
   package_info_plus: ^3.1.2
+  retrofit: ^4.0.1
   shared_preferences: ^2.1.0
+  uuid: ^3.0.7
 
 dev_dependencies:
   auto_route_generator: ^6.2.0
@@ -29,6 +34,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.3.2
+  json_annotation: ^4.8.0
+  json_serializable: ^6.6.1
 
 flutter:
   uses-material-design: true
