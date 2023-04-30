@@ -1,6 +1,8 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart' as chat_ui;
+import 'package:flutter_chatgpt_sample/config/app_constant.dart';
+import 'package:flutter_chatgpt_sample/exception/app_exception.dart';
 import 'package:flutter_chatgpt_sample/feature/chat/entity/message.dart';
 import 'package:flutter_chatgpt_sample/feature/chat/entity/user.dart';
 import 'package:flutter_chatgpt_sample/feature/chat/provider/messages_notifier_provider.dart';
@@ -42,7 +44,21 @@ class ChatPage extends HookConsumerWidget {
           text: partialText.text,
           createdAt: DateTime.now(),
         );
-        ref.read(messagesNotifierProvider.notifier).add(message);
+        ref
+            .read(messagesNotifierProvider.notifier)
+            .addAndPost(message)
+            .onError((error, stackTrace) {
+          final exception = error! as AppException;
+          final themeData = Theme.of(context);
+          final snackBar = SnackBar(
+            content: Text(
+              exception.message,
+              style: themeData.snackBarTheme.contentTextStyle
+                  ?.copyWith(color: AppConstant.snackBarTextColorDanger),
+            ),
+          );
+          ScaffoldMessenger.of(context).showSnackBar(snackBar);
+        });
       },
       user: user,
     );

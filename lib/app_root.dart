@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_chatgpt_sample/config/config/routes/app_router.dart';
-import 'package:flutter_chatgpt_sample/config/themes/app_theme_data.dart';
+import 'package:flutter_chatgpt_sample/config/route/app_router.dart';
+import 'package:flutter_chatgpt_sample/config/theme/app_theme_data.dart';
 import 'package:flutter_chatgpt_sample/feature/locale_setting/provider/locale_notifier_provider.dart';
 import 'package:flutter_chatgpt_sample/feature/theme_setting/provider/theme_mode_notifier_provider.dart';
 import 'package:flutter_gen/gen_l10n/l10n.dart';
