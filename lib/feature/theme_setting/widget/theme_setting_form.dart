@@ -21,6 +21,7 @@ class ThemeSettingForm extends HookConsumerWidget {
       child: Column(
         children: [
           RadioListTile<ThemeMode>(
+            key: const ValueKey('themeModeSystem'),
             controlAffinity: ListTileControlAffinity.trailing,
             secondary: const Icon(FontAwesomeIcons.gear),
             title: Text(l10n.themeSettingSystem),
@@ -31,6 +32,7 @@ class ThemeSettingForm extends HookConsumerWidget {
             },
           ),
           RadioListTile<ThemeMode>(
+            key: const ValueKey('themeModeLight'),
             controlAffinity: ListTileControlAffinity.trailing,
             secondary: const Icon(FontAwesomeIcons.sun),
             title: Text(l10n.themeSettingLight),
@@ -41,6 +43,7 @@ class ThemeSettingForm extends HookConsumerWidget {
             },
           ),
           RadioListTile<ThemeMode>(
+            key: const ValueKey('themeModeDark'),
             controlAffinity: ListTileControlAffinity.trailing,
             secondary: const Icon(FontAwesomeIcons.moon),
             title: Text(l10n.themeSettingDark),
