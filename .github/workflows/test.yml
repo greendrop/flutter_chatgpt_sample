@@ -28,9 +28,15 @@ jobs:
       - name: flutter pub get
         run: |
           flutter pub get
+
       - name: flutter format
         run: |
           flutter format --dry-run --set-exit-if-changed .
+
       - name: flutter analyze
         run: |
           flutter analyze
+
+      - name: flutter test
+        run: |
+          flutter test
