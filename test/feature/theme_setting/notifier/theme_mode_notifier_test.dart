@@ -6,13 +6,13 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
-import 'theme_mode_notifier_provider_test.mocks.dart';
+import 'theme_mode_notifier_test.mocks.dart';
 
 @GenerateNiceMocks([
   MockSpec<ThemeModeRepository>(),
 ])
 void main() {
-  group('themeModeNotifierProvider', () {
+  group('ThemeModeNotifier', () {
     group('#initialize', () {
       test('repository から fetch した内容が登録されること', () async {
         final mockThemeModeRepository = MockThemeModeRepository();
