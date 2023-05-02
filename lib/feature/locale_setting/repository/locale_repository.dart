@@ -5,12 +5,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 class LocaleRepository {
   LocaleRepository({required this.ref});
 
-  static const _localeKey = 'locale';
+  static const localeKey = 'locale';
   final Ref ref;
 
   Future<Locale?> fetch() async {
     final prefs = await SharedPreferences.getInstance();
-    final localeValue = prefs.getString(_localeKey);
+    final localeValue = prefs.getString(localeKey);
     if (localeValue == null || localeValue.isEmpty) {
       return null;
     }
@@ -21,9 +21,9 @@ class LocaleRepository {
   Future<void> update(Locale? locale) async {
     final prefs = await SharedPreferences.getInstance();
     if (locale == null) {
-      await prefs.setString(_localeKey, '');
+      await prefs.setString(localeKey, '');
     } else {
-      await prefs.setString(_localeKey, locale.languageCode);
+      await prefs.setString(localeKey, locale.languageCode);
     }
   }
 }
