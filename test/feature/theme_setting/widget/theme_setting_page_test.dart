@@ -44,7 +44,7 @@ void main() {
       expect(radioListTile.checked, false);
     });
 
-    testWidgets('themeMode.light が選択できること', (tester) async {
+    testWidgets('themeMode.system が選択できること', (tester) async {
       final mockThemeModeRepository = MockThemeModeRepository();
 
       await tester.pumpWidget(

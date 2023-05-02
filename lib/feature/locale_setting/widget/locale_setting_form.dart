@@ -20,6 +20,7 @@ class LocaleSettingForm extends HookConsumerWidget {
       child: Column(
         children: [
           RadioListTile<Locale?>(
+            key: const ValueKey('localeNull'),
             controlAffinity: ListTileControlAffinity.trailing,
             title: Text(l10n.localeSettingSystem),
             value: null,
@@ -29,6 +30,7 @@ class LocaleSettingForm extends HookConsumerWidget {
             },
           ),
           RadioListTile<Locale>(
+            key: const ValueKey('localeEn'),
             controlAffinity: ListTileControlAffinity.trailing,
             title: Text(l10n.localeSettingEnglish),
             value: const Locale('en'),
@@ -38,6 +40,7 @@ class LocaleSettingForm extends HookConsumerWidget {
             },
           ),
           RadioListTile<Locale?>(
+            key: const ValueKey('localeJa'),
             controlAffinity: ListTileControlAffinity.trailing,
             title: Text(l10n.localeSettingJapanese),
             value: const Locale('ja'),
