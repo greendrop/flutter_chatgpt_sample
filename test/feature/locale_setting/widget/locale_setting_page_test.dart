@@ -12,7 +12,7 @@ import 'locale_setting_page_test.mocks.dart';
   MockSpec<LocaleRepository>(),
 ])
 void main() {
-  group('LocaleettingPage', () {
+  group('LocaleSettingPage', () {
     testWidgets('現在の locale が選択されていること', (tester) async {
       final mockLocaleRepository = MockLocaleRepository();
 
@@ -26,6 +26,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       var finder = find.byKey(const ValueKey('localeNull'));
       var radioListTile = finder.evaluate().first.widget as RadioListTile;
@@ -56,6 +57,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('localeNull')));
       await tester.pumpAndSettle();
@@ -78,6 +80,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('localeEn')));
       await tester.pumpAndSettle();
@@ -100,6 +103,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('localeJa')));
       await tester.pumpAndSettle();
