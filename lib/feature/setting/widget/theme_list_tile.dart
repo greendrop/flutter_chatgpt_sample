@@ -13,6 +13,7 @@ class ThemeListTile extends HookConsumerWidget {
     final l10n = L10n.of(context)!;
 
     return ListTile(
+      key: const ValueKey('themeListTile'),
       leading: const Icon(FontAwesomeIcons.circleHalfStroke),
       title: Text(l10n.themeSettingTitle),
       onTap: () => AutoRouter.of(context).push(const ThemeSettingRoute()),

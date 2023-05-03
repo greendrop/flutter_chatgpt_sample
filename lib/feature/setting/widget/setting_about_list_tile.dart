@@ -29,6 +29,7 @@ class SettingAboutListTile extends HookConsumerWidget {
     }
 
     return AboutListTile(
+      key: const ValueKey('aboutListTile'),
       icon: const Icon(FontAwesomeIcons.info),
       applicationName: packageInfo.value!.appName,
       applicationIcon: const Center(

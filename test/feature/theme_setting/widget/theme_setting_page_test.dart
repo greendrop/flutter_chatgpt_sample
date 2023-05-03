@@ -27,6 +27,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       var finder = find.byKey(const ValueKey('themeModeSystem'));
       var radioListTile = finder.evaluate().first.widget as RadioListTile;
@@ -58,6 +59,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('themeModeSystem')));
       await tester.pumpAndSettle();
@@ -81,6 +83,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('themeModeLight')));
       await tester.pumpAndSettle();
@@ -104,6 +107,7 @@ void main() {
           ),
         ),
       );
+      await tester.pumpAndSettle();
 
       await tester.tap(find.byKey(const ValueKey('themeModeDark')));
       await tester.pumpAndSettle();

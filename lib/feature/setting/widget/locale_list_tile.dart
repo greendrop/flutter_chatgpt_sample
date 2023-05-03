@@ -13,6 +13,7 @@ class LocaleListTile extends HookConsumerWidget {
     final l10n = L10n.of(context)!;
 
     return ListTile(
+      key: const ValueKey('localeListTile'),
       leading: const Icon(FontAwesomeIcons.language),
       title: Text(l10n.localeSettingTitle),
       onTap: () => AutoRouter.of(context).push(const LocaleSettingRoute()),
