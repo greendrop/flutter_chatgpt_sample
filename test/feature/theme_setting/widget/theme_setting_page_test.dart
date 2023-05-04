@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt_sample/feature/theme_setting/provider/theme_mode_repository_provider.dart';
 import 'package:flutter_chatgpt_sample/feature/theme_setting/repository/theme_mode_repository.dart';
-import 'package:flutter_chatgpt_sample/feature/theme_setting/widget/theme_setting_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/annotations.dart';
-import '../../../support/widget/test_material_app.dart';
+import '../../../support/widget/test_material_app_router.dart';
 import 'theme_setting_page_test.mocks.dart';
 
 @GenerateNiceMocks([
@@ -22,8 +21,8 @@ void main() {
             themeModeRepositoryProvider
                 .overrideWithValue(mockThemeModeRepository),
           ],
-          child: const TestMaterialApp(
-            child: ThemeSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/theme',
           ),
         ),
       );
@@ -54,8 +53,8 @@ void main() {
             themeModeRepositoryProvider
                 .overrideWithValue(mockThemeModeRepository),
           ],
-          child: const TestMaterialApp(
-            child: ThemeSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/theme',
           ),
         ),
       );
@@ -78,8 +77,8 @@ void main() {
             themeModeRepositoryProvider
                 .overrideWithValue(mockThemeModeRepository),
           ],
-          child: const TestMaterialApp(
-            child: ThemeSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/theme',
           ),
         ),
       );
@@ -102,8 +101,8 @@ void main() {
             themeModeRepositoryProvider
                 .overrideWithValue(mockThemeModeRepository),
           ],
-          child: const TestMaterialApp(
-            child: ThemeSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/theme',
           ),
         ),
       );

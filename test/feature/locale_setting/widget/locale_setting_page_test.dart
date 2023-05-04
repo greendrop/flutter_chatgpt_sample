@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt_sample/feature/locale_setting/provider/locale_repository_provider.dart';
 import 'package:flutter_chatgpt_sample/feature/locale_setting/repository/locale_repository.dart';
-import 'package:flutter_chatgpt_sample/feature/locale_setting/widget/locale_setting_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/annotations.dart';
-import '../../../support/widget/test_material_app.dart';
+import '../../../support/widget/test_material_app_router.dart';
 import 'locale_setting_page_test.mocks.dart';
 
 @GenerateNiceMocks([
@@ -21,8 +20,8 @@ void main() {
           overrides: [
             localeRepositoryProvider.overrideWithValue(mockLocaleRepository),
           ],
-          child: const TestMaterialApp(
-            child: LocaleSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/locale',
           ),
         ),
       );
@@ -52,8 +51,8 @@ void main() {
           overrides: [
             localeRepositoryProvider.overrideWithValue(mockLocaleRepository),
           ],
-          child: const TestMaterialApp(
-            child: LocaleSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/locale',
           ),
         ),
       );
@@ -75,8 +74,8 @@ void main() {
           overrides: [
             localeRepositoryProvider.overrideWithValue(mockLocaleRepository),
           ],
-          child: const TestMaterialApp(
-            child: LocaleSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/locale',
           ),
         ),
       );
@@ -98,8 +97,8 @@ void main() {
           overrides: [
             localeRepositoryProvider.overrideWithValue(mockLocaleRepository),
           ],
-          child: const TestMaterialApp(
-            child: LocaleSettingPage(),
+          child: const TestMaterialAppRouter(
+            initialPath: '/setting/locale',
           ),
         ),
       );

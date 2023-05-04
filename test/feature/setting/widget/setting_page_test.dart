@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_chatgpt_sample/feature/locale_setting/repository/locale_repository.dart';
-import 'package:flutter_chatgpt_sample/feature/setting/widget/setting_page.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/annotations.dart';
 import 'package:package_info_plus/package_info_plus.dart';
-import '../../../support/widget/test_material_app.dart';
+import '../../../support/widget/test_material_app_router.dart';
 
 @GenerateNiceMocks([
   MockSpec<LocaleRepository>(),
@@ -23,8 +22,8 @@ void main() {
 
       await tester.pumpWidget(
         const ProviderScope(
-          child: TestMaterialApp(
-            child: SettingPage(),
+          child: TestMaterialAppRouter(
+            initialPath: '/setting',
           ),
         ),
       );
