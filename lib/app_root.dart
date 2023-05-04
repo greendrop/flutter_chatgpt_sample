@@ -42,8 +42,7 @@ class AppRoot extends HookConsumerWidget {
       theme: AppThemeData().light,
       darkTheme: AppThemeData().dark,
       themeMode: themeMode,
-      routeInformationParser: appRouter.defaultRouteParser(),
-      routerDelegate: appRouter.delegate(),
+      routerConfig: appRouter.config(),
     );
   }
 }

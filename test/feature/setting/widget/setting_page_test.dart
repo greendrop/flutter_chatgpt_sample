@@ -12,7 +12,7 @@ import '../../../support/widget/test_material_app.dart';
 ])
 void main() {
   group('SettingPage', () {
-    testWidgets('', (tester) async {
+    testWidgets('メニューが表示されていること', (tester) async {
       PackageInfo.setMockInitialValues(
         appName: 'appName',
         packageName: 'packageName',
