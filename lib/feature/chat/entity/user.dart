@@ -10,7 +10,7 @@ class User with _$User {
     required String id,
   }) = _User;
 
-  factory User.fromJson(Map<String, Object?> json) => _$UserFromJson(json);
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
   factory User.me() => User(id: User.meId);
   factory User.bot() => User(id: User.botId);
 

@@ -15,7 +15,7 @@ class ChatCompletionResponse with _$ChatCompletionResponse {
     required ChatCompletionResponseUsage usage,
   }) = _ChatCompletionResponse;
 
-  factory ChatCompletionResponse.fromJson(Map<String, Object?> json) =>
+  factory ChatCompletionResponse.fromJson(Map<String, dynamic> json) =>
       _$ChatCompletionResponseFromJson(json);
 }
 
@@ -29,7 +29,7 @@ class ChatCompletionResponseChoice with _$ChatCompletionResponseChoice {
     required String finishReason,
   }) = _ChatCompletionResponseChoice;
 
-  factory ChatCompletionResponseChoice.fromJson(Map<String, Object?> json) =>
+  factory ChatCompletionResponseChoice.fromJson(Map<String, dynamic> json) =>
       _$ChatCompletionResponseChoiceFromJson(json);
 }
 

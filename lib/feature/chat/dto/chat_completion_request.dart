@@ -12,7 +12,7 @@ class ChatCompletionRequest with _$ChatCompletionRequest {
     required List<ChatCompletionRequestMessage> messages,
   }) = _ChatCompletionRequest;
 
-  factory ChatCompletionRequest.fromJson(Map<String, Object?> json) =>
+  factory ChatCompletionRequest.fromJson(Map<String, dynamic> json) =>
       _$ChatCompletionRequestFromJson(json);
 }
 
@@ -25,6 +25,6 @@ class ChatCompletionRequestMessage with _$ChatCompletionRequestMessage {
     required String content,
   }) = _ChatCompletionRequestMessage;
 
-  factory ChatCompletionRequestMessage.fromJson(Map<String, Object?> json) =>
+  factory ChatCompletionRequestMessage.fromJson(Map<String, dynamic> json) =>
       _$ChatCompletionRequestMessageFromJson(json);
 }
