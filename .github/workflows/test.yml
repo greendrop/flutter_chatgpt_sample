@@ -25,6 +25,10 @@ jobs:
           flutter-version: ${{ env.FLUTTER_VERSION }}
           cache: true
 
+      - name: Setup lcov
+        run: |
+          sudo apt-get install lcov
+
       - name: flutter pub get
         run: |
           flutter pub get
@@ -39,4 +43,12 @@ jobs:
 
       - name: flutter test
         run: |
-          flutter test
+          flutter test --coverage
+
+      - name: Remove unnecessary coverage
+        run: |
+          lcov --remove coverage/lcov.info '*.g.dart' '*.gen.dart' -o coverage/removed_lcov.info
+
+      - name: Output coverage
+        run: |
+          lcov --list coverage/removed_lcov.info
