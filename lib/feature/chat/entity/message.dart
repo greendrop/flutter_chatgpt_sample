@@ -14,7 +14,7 @@ class Message with _$Message {
     DateTime? createdAt,
   }) = _Message;
 
-  factory Message.fromJson(Map<String, Object?> json) =>
+  factory Message.fromJson(Map<String, dynamic> json) =>
       _$MessageFromJson(json);
 
   // ignore: unused_element

@@ -1,3 +1,4 @@
+import 'package:flutter_chatgpt_sample/exception/app_exception.dart';
 import 'package:flutter_chatgpt_sample/feature/chat/dto/chat_completion_request.dart';
 import 'package:flutter_chatgpt_sample/feature/chat/entity/message.dart';
 import 'package:flutter_chatgpt_sample/feature/chat/provider/chat_completion_repository_provider.dart';
@@ -14,8 +15,12 @@ class MessagesNotifier extends StateNotifier<List<Message>> {
     state = [];
   }
 
-  Future<void> addAndPost(Message message) async {
+  void add(Message message) {
     state = [...state, message];
+  }
+
+  Future<void> addAndPost(Message message) async {
+    add(message);
 
     final data = ChatCompletionRequest(
       model: 'gpt-3.5-turbo',
@@ -35,7 +40,7 @@ class MessagesNotifier extends StateNotifier<List<Message>> {
 
       state = [...state, responseMessage];
     }).onError((error, stackTrace) {
-      return Future.error(error!);
+      return Future.error(AppException(parentException: error));
     });
   }
 }
